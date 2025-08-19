@@ -1,0 +1,15 @@
+{
+  "title": "Review",
+  "type": "object",
+  "properties": {
+    "summary": {
+      "type": "string",
+      "description": "A brief summary of the review"
+    },
+    "sentiment": {
+      "type": "string",
+      "description": "The sentiment of the review, e.g., positive, negative, neutral"
+    }
+  },
+  "required": ["summary", "sentiment"]
+}
