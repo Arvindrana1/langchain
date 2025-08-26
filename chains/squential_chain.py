@@ -6,8 +6,7 @@ from langchain_core.output_parsers import StrOutputParser
 load_dotenv()
 
 model = ChatGoogleGenerativeAI(
-    model="gemini-2.5-flash",
-    temperature=0,
+    model="gemini-2.5-flash"
 )
 
 prompt1 = PromptTemplate(

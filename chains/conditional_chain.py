@@ -17,7 +17,7 @@ model = ChatGoogleGenerativeAI(
     max_retries=2,
 )
 
-# Define output schema
+# Define output schema  
 class SentimentAnalysisOutput(BaseModel):
     sentiment: Literal['positive', 'negative'] = Field(
         description="The sentiment of the text, can be positive or negative."
@@ -28,6 +28,7 @@ parser = PydanticOutputParser(pydantic_object=SentimentAnalysisOutput)
 
 # Prompt with format instructions
 prompt = PromptTemplate(
+
     template="Analyze the sentiment of the following text:\n{text}\n{format_instructions}",
     input_variables=["text"],
     partial_variables={"format_instructions": parser.get_format_instructions()},

@@ -1,0 +1,1 @@
+int(chain1.invoke({'topics':'ai'})
